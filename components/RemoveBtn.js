@@ -9,7 +9,7 @@ const RemoveBtn = ({ id }) => {
 
     if (confirmed) {
       try {
-        const res = await fetch(`https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/todo?id=${id}`, {
+        const res = await fetch(`https://shift-manager-eight.vercel.app/api/todo?id=${id}`, {
           method: "DELETE",
         });
 

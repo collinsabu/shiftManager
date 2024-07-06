@@ -10,7 +10,7 @@ const RemoveShiftBtn = ({ id }) => {
     if (confirmed) {
       try {
         console.log(`Attempting to delete event with id: ${id}`);
-        const res = await fetch(`https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/events?id=${id}`, {
+        const res = await fetch(`https://shift-manager-eight.vercel.app/api/events?id=${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

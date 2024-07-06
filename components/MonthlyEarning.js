@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const fetchClockInData = async () => {
   try {
-    const res = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/clockin", {
+    const res = await fetch("https://shift-manager-eight.vercel.app/api/clockin", {
       cache: "no-store",
     });
 

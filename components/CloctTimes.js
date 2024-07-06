@@ -21,7 +21,7 @@ const getClockIns = async () => {
 
 const deleteClockIn = async (id) => {
   try {
-    const res = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/clockin", {
+    const res = await fetch("https://shift-manager-eight.vercel.app/api/clockin", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
