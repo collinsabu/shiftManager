@@ -56,25 +56,18 @@ export async function GET(request) {
 
 export async function DELETE(request) {
   try {
-    const url = new URL(request.url);
-    const id = url.searchParams.get('id');
-
-    if (!ObjectId.isValid(id)) {
-      console.log(`Invalid ID: ${id}`);
-      return NextResponse.json({ message: "Invalid ID" }, { status: 400 });
-    }
-
+    const { id } = await request.json();
     await connectMongoDB();
 
-    const result = await Event.deleteOne({ _id: new ObjectId(id) });
+    const result = await Event.findByIdAndDelete(id);
 
-    if (result.deletedCount === 0) {
+    if (!result) {
       console.log(`Event not found with ID: ${id}`);
       return NextResponse.json({ message: "Event not found" }, { status: 404 });
     }
 
     console.log(`Event deleted with ID: ${id}`);
-    return NextResponse.json({ message: "Event Deleted" }, { status: 200 });
+    return NextResponse.json({ message: "Event deleted successfully" }, { status: 200 });
   } catch (error) {
     console.error("Error deleting event:", error.message);
     return NextResponse.json({ message: error.message }, { status: 500 });
