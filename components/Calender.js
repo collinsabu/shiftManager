@@ -11,7 +11,7 @@ const EventPlanner = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/events");
+        const response = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/events");
         const data = await response.json();
         setEvents(data.events);
       } catch (error) {

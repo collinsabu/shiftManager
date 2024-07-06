@@ -21,7 +21,7 @@ const ClockoutModal = ({ setIsClockOutModalOpen }) => {
     const formattedTime = now.toTimeString().split(" ")[0]; // HH:MM:SS
 
     try {
-      const response = await fetch("http://localhost:3000/api/clockout", {
+      const response = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/clockout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

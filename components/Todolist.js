@@ -9,7 +9,7 @@ const TodoList = () => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/todo", {
+        const response = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/todo", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

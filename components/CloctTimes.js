@@ -5,7 +5,7 @@ import { FaDownload } from "react-icons/fa6";
 
 const getClockIns = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/clockin", {
+    const res = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/clockin", {
       cache: "no-store",
     });
 
@@ -21,7 +21,7 @@ const getClockIns = async () => {
 
 const deleteClockIn = async (id) => {
   try {
-    const res = await fetch("http://localhost:3000/api/clockin", {
+    const res = await fetch("https://shift-manager-lr9sby4xz-collins-abus-projects.vercel.app/api/clockin", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
