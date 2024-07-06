@@ -56,7 +56,13 @@ export async function GET(request) {
 
 export async function DELETE(request) {
   try {
-    const { id } = await request.json();
+    const url = new URL(request.url);
+    const id = url.searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json({ message: "ID is required" }, { status: 400 });
+    }
+
     await connectMongoDB();
 
     const result = await Event.findByIdAndDelete(id);
