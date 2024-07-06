@@ -18,7 +18,7 @@ import Nav from "@/components/Nav.js"
 
 const getUsers = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/auth/register", {
+    const res = await fetch("https://shift-manager-eight.vercel.app/api/auth/register", {
       cache: "no-store",
     });
 

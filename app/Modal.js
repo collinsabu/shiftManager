@@ -15,7 +15,7 @@ const Modal = ({ setIsModalOpen }) => {
   const handleModalSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/clockin", {
+      const response = await fetch("https://shift-manager-eight.vercel.app/api/clockin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
