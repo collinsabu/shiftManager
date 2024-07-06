@@ -58,7 +58,6 @@
 .event-date {
   background: #ff0000;
   color: #ffffff;
-  border-radius: 50%;
 }
 
 .react-calendar__tile--now {
