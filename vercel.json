@@ -1,0 +1,9 @@
+
+{
+   "functions": {
+     "api/startscheduler": {
+       "schedule": "*/5 * * * *" 
+     }
+   }
+ }
+ 
