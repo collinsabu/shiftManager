@@ -2,16 +2,9 @@
    "version": 2,
    "functions": {
      "api/trigger-scheduler.js": {
-       "runtime": "nodejs14.x"
+       "runtime": "nodejs14.x",
+       "schedule": "* * * * *"
      }
-   },
-   "cron": {
-     "jobs": [
-       {
-         "path": "/api/trigger-scheduler",
-         "schedule": "* * * * *"
-       }
-     ]
    }
  }
  
