@@ -1,0 +1,14 @@
+name: Schedule API Trigger
+
+on:
+  schedule:
+    - cron: "* * * * *"  # Runs every minute
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel API
+        run: |
+          curl -X GET https://shift-manager-eight.vercel.app//api/trigger-scheduler
