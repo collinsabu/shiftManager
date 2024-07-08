@@ -32,7 +32,7 @@ process.on('SIGINT', async () => {
 });
 
 process.on('SIGTERM', async () => {
-  console.log('SIGTERM signal received: closing MongoDB connection');
+  console.log('SIGTERM signal received: closing MongoDB connection now');
   await mongoose.connection.close();
   console.log('MongoDB connection closed');
   process.exit(0);
