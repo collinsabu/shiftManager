@@ -1,0 +1,15 @@
+{
+   "version": 2,
+   "functions": {
+     "api/trigger-scheduler.js": {
+       "runtime": "vercel/node@18.x"
+     }
+   },
+   "crons": [
+     {
+       "path": "/api/trigger-scheduler",
+       "schedule": "* * * * *"
+     }
+   ]
+ }
+ 
