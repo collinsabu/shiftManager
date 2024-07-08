@@ -15,7 +15,7 @@ import mongoose from 'mongoose';
 
 // Initialize the scheduler to run every minute
 cron.schedule('* * * * *', async () => {
-  console.log('Running scheduled task to check for upcomng events');
+  console.log('Running scheduled task to check for upcoming events');
   try {
     await sendNotifications();
   } catch (error) {
